@@ -976,7 +976,7 @@ export function OrchestrationDAG({ data, onNodeClick, selectedNode }: Orchestrat
         ref={tipRef}
         role="tooltip"
         aria-hidden="true"
-        className="fixed z-50 px-3 py-2 bg-[#12121f] border border-[#2a2a4a] rounded-lg shadow-2xl pointer-events-none"
+        className="fixed z-50 px-3 py-2 bg-tooltip border border-tooltip-border rounded-lg shadow-2xl pointer-events-none"
         style={{
           display: "none",
           opacity: 0,
@@ -1055,10 +1055,11 @@ function buildDAGTooltipContent(el: HTMLDivElement, node: DAGNode, t: TFn) {
     row.style.cssText =
       "display:flex;justify-content:space-between;gap:16px;font-size:11px;line-height:1.6";
     const lbl = document.createElement("span");
-    lbl.style.color = "#64748b";
+    lbl.style.color = "rgb(var(--tooltip-muted))";
     lbl.textContent = label;
     const val = document.createElement("span");
-    val.style.cssText = "color:#cbd5e1;font-weight:500;font-variant-numeric:tabular-nums";
+    val.style.cssText =
+      "color:rgb(var(--tooltip-text));font-weight:500;font-variant-numeric:tabular-nums";
     val.textContent = value;
     row.appendChild(lbl);
     row.appendChild(val);
@@ -1068,12 +1069,13 @@ function buildDAGTooltipContent(el: HTMLDivElement, node: DAGNode, t: TFn) {
 
   const desc = document.createElement("p");
   desc.style.cssText =
-    "font-size:11px;color:#94a3b8;line-height:1.45;border-top:1px solid #2a2a4a;padding-top:8px;margin:0";
+    "font-size:11px;color:rgb(var(--tooltip-muted));line-height:1.45;border-top:1px solid rgb(var(--tooltip-border));padding-top:8px;margin:0";
   desc.textContent = meta.description;
   el.appendChild(desc);
 
   const hint = document.createElement("p");
-  hint.style.cssText = "font-size:10px;color:#64748b;line-height:1.45;margin:6px 0 0";
+  hint.style.cssText =
+    "font-size:10px;color:rgb(var(--tooltip-muted));line-height:1.45;margin:6px 0 0";
   hint.textContent = t("orchestration.tooltip.tipClickToFilter");
   el.appendChild(hint);
 }

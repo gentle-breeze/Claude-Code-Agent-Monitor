@@ -212,7 +212,7 @@ function buildLaneTooltip(
   const dot = document.createElement("span");
   dot.style.cssText = `display:inline-block;width:8px;height:8px;border-radius:9999px;background:${color}`;
   const title = document.createElement("p");
-  title.style.cssText = "font-size:12px;font-weight:600;color:#e2e8f0;margin:0";
+  title.style.cssText = "font-size:12px;font-weight:600;color:rgb(var(--tooltip-text));margin:0";
   title.textContent = displayName;
   header.appendChild(dot);
   header.appendChild(title);
@@ -220,7 +220,7 @@ function buildLaneTooltip(
 
   const subtitle = document.createElement("p");
   subtitle.style.cssText =
-    "font-size:10px;color:#64748b;margin:0 0 8px;text-transform:uppercase;letter-spacing:0.05em";
+    "font-size:10px;color:rgb(var(--tooltip-muted));margin:0 0 8px;text-transform:uppercase;letter-spacing:0.05em";
   subtitle.textContent = t("concurrency.tooltip.lane");
   el.appendChild(subtitle);
 
@@ -230,10 +230,11 @@ function buildLaneTooltip(
     row.style.cssText =
       "display:flex;justify-content:space-between;gap:16px;font-size:11px;line-height:1.6";
     const lbl = document.createElement("span");
-    lbl.style.color = "#64748b";
+    lbl.style.color = "rgb(var(--tooltip-muted))";
     lbl.textContent = label;
     const val = document.createElement("span");
-    val.style.cssText = "color:#cbd5e1;font-weight:500;font-variant-numeric:tabular-nums";
+    val.style.cssText =
+      "color:rgb(var(--tooltip-text));font-weight:500;font-variant-numeric:tabular-nums";
     val.textContent = value;
     row.appendChild(lbl);
     row.appendChild(val);
@@ -246,12 +247,13 @@ function buildLaneTooltip(
 
   const desc = document.createElement("p");
   desc.style.cssText =
-    "font-size:11px;color:#94a3b8;line-height:1.45;border-top:1px solid #2a2a4a;padding-top:8px;margin:8px 0 0";
+    "font-size:11px;color:rgb(var(--tooltip-muted));line-height:1.45;border-top:1px solid rgb(var(--tooltip-border));padding-top:8px;margin:8px 0 0";
   desc.textContent = describeLaneTiming(lane.avgStart, lane.avgEnd, t);
   el.appendChild(desc);
 
   const hint = document.createElement("p");
-  hint.style.cssText = "font-size:10px;color:#64748b;line-height:1.45;margin:6px 0 0";
+  hint.style.cssText =
+    "font-size:10px;color:rgb(var(--tooltip-muted));line-height:1.45;margin:6px 0 0";
   hint.textContent = t("concurrency.tooltip.barHint");
   el.appendChild(hint);
 }
@@ -395,9 +397,9 @@ export function ConcurrencyTimeline({ data }: ConcurrencyTimelineProps) {
           opacity: 0,
           left: 0,
           top: 0,
-          background: "#12121f",
-          border: "1px solid #2a2a4a",
-          color: "#e2e8f0",
+          background: "rgb(var(--tooltip-bg))",
+          border: "1px solid rgb(var(--tooltip-border))",
+          color: "rgb(var(--tooltip-text))",
           minWidth: 240,
           maxWidth: 320,
           transition: "opacity 120ms ease-out",

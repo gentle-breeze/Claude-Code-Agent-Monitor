@@ -452,7 +452,7 @@ export function WorkflowRunsPanel({
           >
             <button
               onClick={() => toggle(run.run_id)}
-              className="w-full flex items-center gap-3 px-3 py-2.5 text-left hover:bg-gray-800/30 transition-colors"
+              className="w-full flex items-center gap-3 px-3 py-2.5 text-left hover:bg-surface-4 transition-colors"
               aria-expanded={isOpen}
             >
               {isOpen ? (
@@ -629,7 +629,7 @@ export function WorkflowRunsPanel({
                               }
                               toggleResult(key);
                             }}
-                            className="w-full flex items-center gap-2 px-2 py-1.5 text-left hover:bg-gray-800/40 transition-colors"
+                            className="w-full flex items-center gap-2 px-2 py-1.5 text-left hover:bg-surface-4 transition-colors"
                             aria-expanded={open}
                           >
                             {open ? (

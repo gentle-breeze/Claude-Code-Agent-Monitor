@@ -6,6 +6,10 @@
 
 :root {
   color-scheme: dark;
+  --tooltip-bg: 18 18 31;
+  --tooltip-border: 42 42 74;
+  --tooltip-text: 226 232 240;
+  --tooltip-muted: 148 163 184;
   --surface-0: 6 6 10;
   --surface-1: 12 12 20;
   --surface-2: 19 19 30;
@@ -25,6 +29,10 @@
 }
 :root[data-theme="light"] {
   color-scheme: light;
+  --tooltip-bg: 255 255 255;
+  --tooltip-border: 148 163 184;
+  --tooltip-text: 15 23 42;
+  --tooltip-muted: 71 85 105;
   --surface-0: 245 247 251;
   --surface-1: 238 242 248;
   --surface-2: 248 250 252;

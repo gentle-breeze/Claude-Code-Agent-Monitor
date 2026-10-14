@@ -10,6 +10,12 @@ export default {
   theme: {
     extend: {
       colors: {
+        tooltip: {
+          DEFAULT: "rgb(var(--tooltip-bg) / <alpha-value>)",
+          border: "rgb(var(--tooltip-border) / <alpha-value>)",
+          text: "rgb(var(--tooltip-text) / <alpha-value>)",
+          muted: "rgb(var(--tooltip-muted) / <alpha-value>)",
+        },
         gray: Object.fromEntries(
           [50, 100, 200, 300, 400, 500].map((shade) => [
             shade,
