@@ -633,5 +633,15 @@
     "removeKeep": "제거 (데이터 유지)",
     "remoteSourceBadgeTitle": "원격 머신에서 수집됨"
   },
-  "cursorPathsNote": "Cursor는 Claude Code 대시보드 범위에 포함됩니다. 로컬 기록은 ~/.cursor에서 자동 검색 및 스냅샷되며 Claude 전용 SSH 가져오기는 원격 Cursor 폴더를 동기화하지 않습니다."
+  "cursorPathsNote": "Cursor는 Claude Code 대시보드 범위에 포함됩니다. 로컬 기록은 ~/.cursor에서 자동 검색 및 스냅샷되며 Claude 전용 SSH 가져오기는 원격 Cursor 폴더를 동기화하지 않습니다.",
+  "appearance": {
+    "title": "화면 설정",
+    "description": "테마와 글자 크기는 즉시 적용되며 이 브라우저에 저장됩니다.",
+    "theme": "테마",
+    "dark": "어둡게",
+    "light": "밝게",
+    "system": "시스템 설정 따르기",
+    "fontSize": "글자 크기",
+    "preview": "미리 보기: 편안한 글자 크기로 세션, 활동 및 사용량을 확인하세요."
+  }
 }

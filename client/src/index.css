@@ -4,6 +4,45 @@
  * @author Son Nguyen <hoangson091104@gmail.com>
  */
 
+:root {
+  color-scheme: dark;
+  --surface-0: 6 6 10;
+  --surface-1: 12 12 20;
+  --surface-2: 19 19 30;
+  --surface-3: 26 26 40;
+  --surface-4: 34 34 51;
+  --surface-5: 42 42 61;
+  --border: 42 42 61;
+  --border-light: 54 54 80;
+  --accent: 99 102 241;
+  --accent-hover: 129 140 248;
+  --gray-50: 249 250 251;
+  --gray-100: 243 244 246;
+  --gray-200: 229 231 235;
+  --gray-300: 209 213 219;
+  --gray-400: 156 163 175;
+  --gray-500: 107 114 128;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --surface-0: 245 247 251;
+  --surface-1: 238 242 248;
+  --surface-2: 248 250 252;
+  --surface-3: 255 255 255;
+  --surface-4: 235 240 247;
+  --surface-5: 222 229 240;
+  --border: 203 213 225;
+  --border-light: 148 163 184;
+  --accent: 79 70 229;
+  --accent-hover: 67 56 202;
+  --gray-50: 15 23 42;
+  --gray-100: 15 23 42;
+  --gray-200: 30 41 59;
+  --gray-300: 51 65 85;
+  --gray-400: 71 85 105;
+  --gray-500: 100 116 139;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,7 +50,7 @@
 @layer base {
   * {
     scrollbar-width: thin;
-    scrollbar-color: #2a2a3d #0c0c14;
+    scrollbar-color: rgb(var(--border)) rgb(var(--surface-1));
   }
 
   *::-webkit-scrollbar {
@@ -20,25 +59,25 @@
   }
 
   *::-webkit-scrollbar-track {
-    background: #0c0c14;
+    background: rgb(var(--surface-1));
   }
 
   *::-webkit-scrollbar-thumb {
-    background: #2a2a3d;
+    background: rgb(var(--border));
     border-radius: 3px;
   }
 
   *::-webkit-scrollbar-thumb:hover {
-    background: #363650;
+    background: rgb(var(--border-light));
   }
 
   ::selection {
     background: rgba(99, 102, 241, 0.3);
-    color: #e4e4ed;
+    color: rgb(var(--gray-200));
   }
 
   ::-webkit-calendar-picker-indicator {
-    filter: invert(1) brightness(0.8);
+    /* Native controls follow the resolved color-scheme. */
     cursor: pointer;
     opacity: 0.7;
     transition: opacity 0.2s;
@@ -100,7 +139,7 @@
     border-radius: 0.5rem;
     border: 1px solid #363650;
     background: #15151f;
-    color: #e4e4ed;
+    color: rgb(var(--gray-200));
     font-size: 0.8125rem;
     font-weight: 500;
     text-decoration: none;
@@ -126,4 +165,94 @@
 
 .animate-pulse-dot {
   animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Keep dense pixel-sized labels in step with the root text preference. */
+.text-\[8px\] {
+  font-size: 0.5rem;
+}
+.text-\[9px\] {
+  font-size: 0.5625rem;
+}
+.text-\[10px\] {
+  font-size: 0.625rem;
+}
+.text-\[10\.5px\] {
+  font-size: 0.65625rem;
+}
+.text-\[11px\] {
+  font-size: 0.6875rem;
+}
+.text-\[11\.5px\] {
+  font-size: 0.71875rem;
+}
+.text-\[12px\] {
+  font-size: 0.75rem;
+}
+.text-\[12\.5px\] {
+  font-size: 0.78125rem;
+}
+.text-\[13px\] {
+  font-size: 0.8125rem;
+}
+.text-\[15px\] {
+  font-size: 0.9375rem;
+}
+.text-\[16px\] {
+  font-size: 1rem;
+}
+.text-\[18px\] {
+  font-size: 1.125rem;
+}
+:root[data-theme="light"] .text-emerald-300,
+:root[data-theme="light"] .text-emerald-400 {
+  color: rgb(4 120 87);
+}
+:root[data-theme="light"] .text-green-300,
+:root[data-theme="light"] .text-green-400 {
+  color: rgb(21 128 61);
+}
+:root[data-theme="light"] .text-yellow-300,
+:root[data-theme="light"] .text-yellow-400 {
+  color: rgb(133 77 14);
+}
+:root[data-theme="light"] .text-amber-300,
+:root[data-theme="light"] .text-amber-400 {
+  color: rgb(180 83 9);
+}
+:root[data-theme="light"] .text-red-300,
+:root[data-theme="light"] .text-red-400 {
+  color: rgb(185 28 28);
+}
+:root[data-theme="light"] .text-orange-300,
+:root[data-theme="light"] .text-orange-400 {
+  color: rgb(194 65 12);
+}
+:root[data-theme="light"] .text-blue-300,
+:root[data-theme="light"] .text-blue-400 {
+  color: rgb(29 78 216);
+}
+:root[data-theme="light"] .text-cyan-300,
+:root[data-theme="light"] .text-cyan-400 {
+  color: rgb(14 116 144);
+}
+:root[data-theme="light"] .text-violet-300,
+:root[data-theme="light"] .text-violet-400 {
+  color: rgb(109 40 217);
+}
+:root[data-theme="light"] .text-purple-300,
+:root[data-theme="light"] .text-purple-400 {
+  color: rgb(126 34 206);
+}
+:root[data-theme="light"] .text-pink-300,
+:root[data-theme="light"] .text-pink-400 {
+  color: rgb(190 24 93);
+}
+:root[data-theme="light"] .text-indigo-300,
+:root[data-theme="light"] .text-indigo-400 {
+  color: rgb(67 56 202);
+}
+:root[data-theme="light"] .text-teal-300,
+:root[data-theme="light"] .text-teal-400 {
+  color: rgb(15 118 110);
 }

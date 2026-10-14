@@ -1,5 +1,7 @@
 # Claude Code, Cursor & Codex용 에이전트 대시보드
 
+[모니터링 지표 빠른 참조 (중국어)](docs/MONITORING-CN.md)
+
 ### Claude Code, Cursor & Codex 에이전트 활동을 위한 실시간 모니터링 플랫폼 🚀
 
 Claude Code, Cursor, Codex 에이전트 세션, 도구 사용, 대화 기록, 비용 및 서브에이전트 오케스트레이션을 실시간으로 추적하는 전문 대시보드입니다. 네이티브 Hook과 공급자별 로컬 transcript 검색을 결합합니다.
@@ -356,6 +358,8 @@ flowchart LR
 | **Desktop App (macOS & Windows)** | Electron 35가 동일한 in-process Express server와 React client를 macOS DMG, Windows installer/portable EXE로 package합니다. Native menu, tray status/action, login launch, quit confirmation, native notification, single-instance lock, 안전한 port fallback/adoption, 깔끔한 SQLite shutdown, 첫 실행 Hook/background setup을 추가합니다. |
 | **Self-hosted assets (no CDN)** | Font, script, Wiki Mermaid, extension fallback은 로컬입니다. App, landing page, Wiki는 Google Fonts, jsDelivr 또는 다른 third-party asset request 없이 offline으로 작동합니다. |
 | **Session splash screen** | 현지화된 browser session당 1회의 greeting과 node-graph animation이 first paint부터 불투명하게 나타나 약 2.5초 동안 유지됩니다. Click-to-skip을 지원하고 reduced motion을 준수합니다. |
+
+설정 → 화면 설정에서 어두운 테마(기본값), 밝은 테마 또는 시스템 테마와 90%, 100%, 110%, 125% 글자 크기를 선택할 수 있습니다. 변경 사항은 즉시 적용되며 현재 브라우저에 저장되고 탭 간에 동기화됩니다. 시스템 모드는 운영 체제의 테마 변경을 따릅니다. 이 설정은 모니터링 데이터나 모델 가격을 변경하지 않습니다.
 
 > **Provider 범위와 home:** Settings는 Claude 호환(Claude Code + Cursor) / Codex / Both 선택을 앱 전체에서 일관되게 유지합니다. Claude Code와 Codex home은 대시보드를 재시작하지 않고 편집할 수 있으며, Cursor는 `~/.cursor` 또는 `DASHBOARD_CURSOR_HOME`에서 자동으로 검색됩니다.
 >

@@ -64,8 +64,12 @@ import "@fontsource/inter/latin-700.css";
 import "@fontsource/jetbrains-mono/latin-400.css";
 import "@fontsource/jetbrains-mono/latin-500.css";
 import App from "./App";
+import { initializeAppearance } from "./lib/appearance";
 import "./i18n";
 import "./index.css";
+
+const cleanupAppearance = initializeAppearance();
+if (import.meta.hot) import.meta.hot.dispose(cleanupAppearance);
 
 if ("serviceWorker" in navigator) {
   // Detect whether the page is already controlled by an SW *before* we

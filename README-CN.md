@@ -1,5 +1,7 @@
 # Claude Code、Cursor 与 Codex Agent Dashboard（Agent 监控面板）
 
+[监控指标速查：含义、数据来源与刷新方式](docs/MONITORING-CN.md)
+
 ### Claude Code、Cursor 与 Codex Agent 活动实时监控平台 🚀
 
 专业的 Dashboard，用于实时追踪和可视化 Claude Code、Cursor 与 Codex Agent 会话、工具使用、对话历史、成本和子 Agent 编排。基于 Node.js、Express、React 和 SQLite，结合原生 Hook 与按提供方识别的本地 transcript 发现。
@@ -358,6 +360,8 @@ Dashboard 覆盖完整的本地 Agent 生命周期。详细运行契约仍见相
 | **桌面应用（macOS 与 Windows）** | Electron 35 将同一进程内 Express 服务器和 React 客户端打包为 macOS DMG、Windows 安装版或便携 EXE。增加原生菜单、托盘状态/操作、登录启动、退出确认、原生通知、单实例锁、安全端口回退/接管、SQLite 干净关闭，以及首次运行 Hook/后台设置。 |
 | **自托管资源（无 CDN）** | 字体、脚本、Wiki Mermaid 和扩展回退全部位于本地。应用、Landing Page 和 Wiki 无需请求 Google Fonts、jsDelivr 或其他第三方资源即可离线工作。 |
 | **会话启动画面** | 每个浏览器会话显示一次的本地化问候和节点图动画从首帧起保持不透明，持续约 2.5 秒，支持点击跳过并遵循减少动态效果设置。 |
+
+设置 → 外观提供深色（默认）、浅色或跟随系统主题，以及 90%、100%、110% 和 125% 字号。更改立即生效，保存在当前浏览器并在其标签页之间同步；跟随系统模式会响应操作系统的主题变化。这些偏好不会改变监控数据或模型定价。
 
 > **Provider 范围和主目录：** Settings 在 Claude 兼容（Claude Code + Cursor）/ Codex / Both 之间保持全局一致。Claude Code 和 Codex 主目录无需重启 Dashboard 即可编辑；Cursor 自动从 `~/.cursor` 或 `DASHBOARD_CURSOR_HOME` 发现。
 >

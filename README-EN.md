@@ -1,5 +1,7 @@
 # Agent Dashboard for Claude Code, Cursor & Codex
 
+[Monitoring metrics quick reference (Chinese)](docs/MONITORING-CN.md)
+
 ### Real-time monitoring platform for Claude Code, Cursor & Codex agent activity 🚀
 
 A professional dashboard to track and visualize Claude Code, Cursor, and Codex agent sessions, tool usage, conversation history, cost, and subagent orchestration in real time. Built with Node.js, Express, React, and SQLite, it combines native hooks with provider-aware local transcript discovery.
@@ -357,6 +359,8 @@ The dashboard covers the complete local agent lifecycle. Detailed operational co
 | **Desktop App (macOS & Windows)** | Electron 35 packages macOS DMGs and Windows installer/portable EXEs around the same in-process Express server and React client. It adds native menus, tray status/actions, login launch, quit confirmation, native notifications, a single-instance lock, safe port fallback/adoption, clean SQLite shutdown, and first-run hook/background setup. |
 | **Self-hosted assets (no CDN)** | Fonts, scripts, Wiki Mermaid, and extension fallbacks are local. The app, landing page, and Wiki work offline without Google Fonts, jsDelivr, or other third-party asset requests. |
 | **Session splash screen** | A localized, once-per-browser-session greeting and node-graph animation appears opaque from first paint, lasts about 2.5 seconds, supports click-to-skip, and honors reduced motion. |
+
+Settings → Appearance offers dark (default), light, or system-following themes and 90%, 100%, 110%, or 125% text size. Changes apply immediately, persist in this browser, and synchronize across its tabs; system mode follows operating-system changes. These preferences do not change monitoring data or model pricing.
 
 > **Provider scope and homes:** Settings keeps the Claude-compatible (Claude Code + Cursor) / Codex / Both choice globally consistent. Claude Code and Codex homes remain editable without restarting the dashboard; Cursor is discovered automatically from `~/.cursor` or `DASHBOARD_CURSOR_HOME`.
 >

@@ -1,5 +1,7 @@
 # Panel de agentes para Claude Code, Cursor y Codex
 
+[Referencia rápida de métricas de monitoreo (chino)](docs/MONITORING-CN.md)
+
 ### Plataforma de monitoreo en tiempo real para agentes Claude Code, Cursor y Codex 🚀
 
 Un panel profesional para rastrear sesiones, herramientas, historial de conversaciones, costos y subagentes de Claude Code, Cursor y Codex en tiempo real. Combina hooks nativos con detección local de transcripciones específica por proveedor.
@@ -356,6 +358,8 @@ El panel cubre todo el ciclo de vida de los agentes locales. Los contratos opera
 | **Aplicación de escritorio (macOS y Windows)** | Electron 35 empaqueta DMGs de macOS y EXEs de instalador y portátiles de Windows alrededor del mismo servidor Express en proceso y cliente React. Añade menús nativos, estado y acciones en tray, inicio de sesión, confirmación al salir, notificaciones nativas, bloqueo de instancia única, fallback y adopción segura de puertos, cierre limpio de SQLite y configuración inicial de hooks y servicios en segundo plano. |
 | **Recursos autoalojados (sin CDN)** | Las fuentes, scripts, Mermaid de Wiki y fallbacks de la extensión son locales. La aplicación, la página de inicio y Wiki funcionan sin conexión y sin solicitudes a Google Fonts, jsDelivr u otros recursos de terceros. |
 | **Pantalla inicial de sesión** | Un saludo localizado por sesión del navegador y una animación de gráfico de nodos aparecen opacos desde el primer render, duran unos 2.5 segundos, se pueden omitir con un clic y respetan la reducción de movimiento. |
+
+Configuración → Apariencia permite elegir el tema oscuro (predeterminado), claro o del sistema y un tamaño de texto del 90%, 100%, 110% o 125%. Los cambios se aplican al instante, se guardan en este navegador y se sincronizan entre sus pestañas; el modo del sistema sigue los cambios del sistema operativo. Estas preferencias no cambian los datos de monitoreo ni los precios de los modelos.
 
 > **Alcance y homes de los proveedores:** Configuración mantiene coherente en toda la aplicación la elección Claude-compatible (Claude Code + Cursor), Codex o Ambos. Los homes de Claude Code y Codex se pueden editar sin reiniciar el panel. Cursor se detecta automáticamente desde `~/.cursor` o `DASHBOARD_CURSOR_HOME`.
 >

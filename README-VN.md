@@ -1,5 +1,7 @@
 # Bảng điều khiển Agent cho Claude Code, Cursor & Codex
 
+[Tra cứu nhanh chỉ số giám sát (tiếng Trung)](docs/MONITORING-CN.md)
+
 ### Nền tảng giám sát thời gian thực cho hoạt động Agent Claude Code, Cursor & Codex 🚀
 
 Bảng điều khiển chuyên nghiệp để theo dõi Claude Code, Cursor và Codex: phiên, công cụ, lịch sử hội thoại, chi phí và điều phối agent phụ theo thời gian thực. Hệ thống kết hợp hook gốc với phát hiện transcript cục bộ theo nhà cung cấp.
@@ -357,6 +359,8 @@ Dashboard bao quát toàn bộ vòng đời Agent cục bộ. Các hợp đồng
 | **Ứng dụng máy tính để bàn (macOS & Windows)** | Electron 35 đóng gói DMG macOS và EXE trình cài/portable Windows quanh cùng máy chủ Express trong tiến trình và client React. Ứng dụng bổ sung menu gốc, trạng thái/hành động tray, chạy khi đăng nhập, xác nhận thoát, thông báo gốc, khóa một phiên bản, fallback/tiếp nhận cổng an toàn, tắt SQLite sạch và thiết lập hook/nền ở lần chạy đầu. |
 | **Tài nguyên tự lưu trữ (không CDN)** | Font, script, Mermaid của Wiki và fallback của extension đều cục bộ. Ứng dụng, trang chủ và Wiki hoạt động ngoại tuyến mà không yêu cầu Google Fonts, jsDelivr hay tài nguyên bên thứ ba khác. |
 | **Màn hình splash phiên** | Lời chào đã bản địa hóa và hoạt ảnh đồ thị nút xuất hiện một lần mỗi phiên trình duyệt, đục từ lần vẽ đầu tiên, kéo dài khoảng 2.5 giây, hỗ trợ bấm để bỏ qua và tôn trọng reduced motion. |
+
+Cài đặt → Giao diện cung cấp chủ đề tối (mặc định), sáng hoặc theo hệ thống và cỡ chữ 90%, 100%, 110% hoặc 125%. Thay đổi có hiệu lực ngay, được lưu trong trình duyệt và đồng bộ giữa các thẻ; chế độ hệ thống theo thay đổi của hệ điều hành. Các tùy chọn này không thay đổi dữ liệu giám sát hoặc giá mô hình.
 
 > **Phạm vi nhà cung cấp và thư mục:** Cài đặt giữ lựa chọn tương thích Claude (Claude Code + Cursor) / Codex / Cả hai nhất quán trên toàn ứng dụng. Có thể chỉnh sửa thư mục Claude Code và Codex mà không cần khởi động lại dashboard; Cursor được tự động phát hiện từ `~/.cursor` hoặc `DASHBOARD_CURSOR_HOME`.
 >

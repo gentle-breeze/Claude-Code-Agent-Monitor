@@ -1367,3 +1367,9 @@ The client is a production-ready React application with:
 - 🎨 **Maintainable** - Clear architecture, type-safe, well-documented
 
 For server documentation, see [server/README.md](../server/README.md).
+
+### Appearance preferences
+
+Settings → Appearance offers dark (default), light, or system-following themes and 90%, 100%, 110%, or 125% text size. Changes apply immediately, persist in this browser, and synchronize across its tabs; system mode follows operating-system changes. These preferences do not change monitoring data or model pricing.
+
+`src/lib/appearance.ts` applies validated localStorage preferences before React mounts; `AppearanceSettings` edits them. Theme-aware Tailwind color tokens and rem-based labels preserve the existing dark defaults and scale dense text with the root font size.

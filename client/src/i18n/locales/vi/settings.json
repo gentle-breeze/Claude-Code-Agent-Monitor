@@ -633,5 +633,15 @@
     "removeKeep": "Xóa (giữ dữ liệu)",
     "remoteSourceBadgeTitle": "Được thu thập từ một máy từ xa"
   },
-  "cursorPathsNote": "Cursor được bao gồm trong phạm vi dashboard Claude Code. Lịch sử cục bộ được tự động phát hiện và lưu snapshot từ ~/.cursor; import SSH chỉ đồng bộ Claude không đồng bộ thư mục Cursor từ xa."
+  "cursorPathsNote": "Cursor được bao gồm trong phạm vi dashboard Claude Code. Lịch sử cục bộ được tự động phát hiện và lưu snapshot từ ~/.cursor; import SSH chỉ đồng bộ Claude không đồng bộ thư mục Cursor từ xa.",
+  "appearance": {
+    "title": "Giao diện",
+    "description": "Chủ đề và cỡ chữ có hiệu lực ngay và được lưu trong trình duyệt này.",
+    "theme": "Chủ đề",
+    "dark": "Tối",
+    "light": "Sáng",
+    "system": "Theo hệ thống",
+    "fontSize": "Cỡ chữ",
+    "preview": "Xem trước: Đọc phiên, hoạt động và mức sử dụng với cỡ chữ thoải mái."
+  }
 }

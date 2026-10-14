@@ -1,6 +1,6 @@
 /**
  * @file tailwind.config.js
- * @description Tailwind CSS configuration — content globs and the dashboard's dark-theme design tokens.
+ * @description Tailwind CSS configuration — content globs and the dashboard's theme-aware design tokens.
  * @author Son Nguyen <hoangson091104@gmail.com>
  */
 
@@ -10,21 +10,27 @@ export default {
   theme: {
     extend: {
       colors: {
+        gray: Object.fromEntries(
+          [50, 100, 200, 300, 400, 500].map((shade) => [
+            shade,
+            `rgb(var(--gray-${shade}) / <alpha-value>)`,
+          ])
+        ),
         surface: {
-          0: "#06060a",
-          1: "#0c0c14",
-          2: "#13131e",
-          3: "#1a1a28",
-          4: "#222233",
-          5: "#2a2a3d",
+          0: "rgb(var(--surface-0) / <alpha-value>)",
+          1: "rgb(var(--surface-1) / <alpha-value>)",
+          2: "rgb(var(--surface-2) / <alpha-value>)",
+          3: "rgb(var(--surface-3) / <alpha-value>)",
+          4: "rgb(var(--surface-4) / <alpha-value>)",
+          5: "rgb(var(--surface-5) / <alpha-value>)",
         },
         border: {
-          DEFAULT: "#2a2a3d",
-          light: "#363650",
+          DEFAULT: "rgb(var(--border) / <alpha-value>)",
+          light: "rgb(var(--border-light) / <alpha-value>)",
         },
         accent: {
-          DEFAULT: "#6366f1",
-          hover: "#818cf8",
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          hover: "rgb(var(--accent-hover) / <alpha-value>)",
           muted: "rgba(99, 102, 241, 0.15)",
         },
       },

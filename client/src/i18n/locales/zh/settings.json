@@ -633,5 +633,15 @@
     "removeKeep": "移除（保留数据）",
     "remoteSourceBadgeTitle": "从远程机器收集"
   },
-  "cursorPathsNote": "Cursor 已包含在 Claude Code 仪表板范围内。本地历史会自动从 ~/.cursor 发现并创建快照；仅同步 Claude 的 SSH 导入不会同步远程 Cursor 文件夹。"
+  "cursorPathsNote": "Cursor 已包含在 Claude Code 仪表板范围内。本地历史会自动从 ~/.cursor 发现并创建快照；仅同步 Claude 的 SSH 导入不会同步远程 Cursor 文件夹。",
+  "appearance": {
+    "title": "外观",
+    "description": "主题和字号立即生效，并保存在当前浏览器中。",
+    "theme": "主题",
+    "dark": "深色",
+    "light": "浅色",
+    "system": "跟随系统",
+    "fontSize": "字号",
+    "preview": "预览：以舒适的字号查看会话、活动和用量。"
+  }
 }

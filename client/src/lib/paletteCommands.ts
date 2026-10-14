@@ -420,6 +420,7 @@ export const PAGE_COMMANDS: {
  * nowhere and nothing else would notice.
  */
 export const SETTINGS_SECTION_COMMANDS: { id: string; labelKey: string; icon: LucideIcon }[] = [
+  { id: "appearance", labelKey: "settings:appearance.title", icon: SettingsIcon },
   { id: "data-display", labelKey: "settings:display.title", icon: Layers },
   { id: "claude-pricing", labelKey: "settings:pricing.navClaude", icon: DollarSign },
   { id: "cursor-pricing", labelKey: "settings:pricing.navCursor", icon: DollarSign },

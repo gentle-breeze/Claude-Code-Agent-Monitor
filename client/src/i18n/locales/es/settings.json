@@ -633,5 +633,15 @@
     "removeKeep": "Eliminar (conservar datos)",
     "remoteSourceBadgeTitle": "Recopilado desde una máquina remota"
   },
-  "cursorPathsNote": "Cursor está incluido en el ámbito de Claude Code del panel. El historial local se detecta y conserva automáticamente desde ~/.cursor; las importaciones SSH solo de Claude no sincronizan carpetas remotas de Cursor."
+  "cursorPathsNote": "Cursor está incluido en el ámbito de Claude Code del panel. El historial local se detecta y conserva automáticamente desde ~/.cursor; las importaciones SSH solo de Claude no sincronizan carpetas remotas de Cursor.",
+  "appearance": {
+    "title": "Apariencia",
+    "description": "El tema y el tamaño del texto se aplican al instante y se guardan en este navegador.",
+    "theme": "Tema",
+    "dark": "Oscuro",
+    "light": "Claro",
+    "system": "Seguir al sistema",
+    "fontSize": "Tamaño del texto",
+    "preview": "Vista previa: Sesiones, actividad y uso con un tamaño de lectura cómodo."
+  }
 }

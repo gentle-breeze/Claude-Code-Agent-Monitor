@@ -3048,3 +3048,7 @@ make docker-down    Stop docker-compose stack
 ```
 
 See `Makefile` for the complete set of 30 targets covering setup, dev, testing, formatting, MCP, data management, Codex extensions, and Docker/Podman workflows.
+
+### Browser appearance preferences
+
+`client/src/lib/appearance.ts` owns the `agent-monitor-appearance` localStorage record (`theme`, `fontScale`), applies the resolved `data-theme` and root font size before React mounts, and synchronizes system-theme and cross-tab storage changes. `client/src/components/AppearanceSettings.tsx` exposes the controls in Settings. CSS variables feed the Tailwind surface, border, accent, and neutral palettes. Storage errors fall back to in-tab operation; no API or database writes are involved.

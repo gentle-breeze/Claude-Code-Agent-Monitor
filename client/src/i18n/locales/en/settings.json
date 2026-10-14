@@ -633,5 +633,15 @@
     "removeKeep": "Remove (keep data)",
     "remoteSourceBadgeTitle": "Collected from a remote machine"
   },
-  "cursorPathsNote": "Cursor is included with the Claude Code dashboard scope. Local history is discovered and snapshotted from ~/.cursor automatically; remote Cursor folders are not synced by Claude-only SSH imports."
+  "cursorPathsNote": "Cursor is included with the Claude Code dashboard scope. Local history is discovered and snapshotted from ~/.cursor automatically; remote Cursor folders are not synced by Claude-only SSH imports.",
+  "appearance": {
+    "title": "Appearance",
+    "description": "Theme and text size apply immediately and are saved in this browser.",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "system": "Follow system",
+    "fontSize": "Text size",
+    "preview": "Preview: Sessions, activity, and usage at a comfortable reading size."
+  }
 }

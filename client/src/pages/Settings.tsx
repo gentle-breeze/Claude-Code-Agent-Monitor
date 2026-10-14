@@ -129,6 +129,7 @@ import {
 import { fmt, fmtCost, getCurrentLocale } from "../lib/format";
 import { subscribeToPush, unsubscribeFromPush } from "../lib/push";
 import { Tip } from "../components/Tip";
+import { AppearanceSettings } from "../components/AppearanceSettings";
 import { ImportHistory } from "../components/ImportHistory";
 import { RemoteSources } from "../components/RemoteSources";
 import { Skeleton } from "../components/Skeleton";
@@ -149,6 +150,7 @@ const SETTINGS_SECTIONS: {
   fallback?: string;
   Icon: typeof DollarSign;
 }[] = [
+  { id: "appearance", labelKey: "appearance.title", Icon: SettingsIcon },
   { id: "data-display", labelKey: "display.title", Icon: Layers },
   { id: "claude-pricing", labelKey: "pricing.navClaude", Icon: DollarSign },
   { id: "cursor-pricing", labelKey: "pricing.navCursor", Icon: DollarSign },
@@ -2286,6 +2288,10 @@ export function Settings() {
           </button>
         )}
       </nav>
+
+      <section id="appearance" className="scroll-mt-24">
+        <AppearanceSettings />
+      </section>
 
       {/* Cost summary card */}
       <div className="card p-6">
