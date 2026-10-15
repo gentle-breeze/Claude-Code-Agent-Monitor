@@ -224,9 +224,13 @@
 :root[data-theme="light"] .text-yellow-400 {
   color: rgb(133 77 14);
 }
+:root[data-theme="light"] .text-amber-100,
+:root[data-theme="light"] .text-amber-200,
 :root[data-theme="light"] .text-amber-300,
-:root[data-theme="light"] .text-amber-400 {
-  color: rgb(180 83 9);
+:root[data-theme="light"] .text-amber-400,
+:root[data-theme="light"] .text-amber-300\/90,
+:root[data-theme="light"] .text-amber-400\/90 {
+  color: rgb(146 64 14);
 }
 :root[data-theme="light"] .text-red-300,
 :root[data-theme="light"] .text-red-400 {

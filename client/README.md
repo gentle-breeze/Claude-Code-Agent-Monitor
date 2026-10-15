@@ -1375,3 +1375,5 @@ Settings → Appearance offers dark (default), light, or system-following themes
 `src/lib/appearance.ts` applies validated localStorage preferences before React mounts; `AppearanceSettings` edits them. Theme-aware Tailwind color tokens and rem-based labels preserve the existing dark defaults and scale dense text with the root font size.
 
 Tooltip surfaces use the `tooltip` Tailwind palette (`--tooltip-bg`, `--tooltip-border`, `--tooltip-text`, `--tooltip-muted`). The shared `Tip` and chart/popover tooltips must pair theme-aware text with theme-aware backgrounds; imperative D3 tooltip builders use these same CSS variables so an open tooltip updates when the theme changes. Avoid fixed dark backgrounds with the globally themed gray text palette.
+
+Amber notice text (including pale headings and 90%-opacity variants) uses a darker foreground in light mode. Keep read-only configuration banners, warning text, and their icons readable against tinted surfaces; dark-mode amber colors remain unchanged.
